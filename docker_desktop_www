@@ -54,3 +54,21 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+
+
+$ cat ei3kf.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ei3kf-app-pod
+spec:
+  containers:
+    - name: ei3kf-www-container
+      image: my_nginx:latest
+      ports:
+        - containerPort: 80
+
+$ kubectl delete pod www-app-pod
+pod "www-app-pod" deleted
+
+
